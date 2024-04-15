@@ -69,6 +69,10 @@ module ElasticAPM
       transaction.notifications << Notification.new(id, span)
     end
 
+    def call(name, id, payload)
+      start(name, id, payload)
+    end
+
     # rubocop:disable Metrics/CyclomaticComplexity
     def finish(name, id, payload)
       # debug "AS::Notification#finish:#{name}:#{id}"
