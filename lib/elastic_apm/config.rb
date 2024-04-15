@@ -26,6 +26,7 @@ require 'elastic_apm/config/regexp_list'
 require 'elastic_apm/config/wildcard_pattern_list'
 require 'elastic_apm/deprecations'
 require 'elastic_apm/config/server_info'
+require 'yaml'
 
 module ElasticAPM
   # @api private
