@@ -69,7 +69,10 @@ module ElasticAPM
       transaction.notifications << Notification.new(id, span)
     end
 
-    def call(name, id, payload)
+    def call(name, id, payload, arg1, arg2)
+      puts "*****" * 20
+      puts "name: #{name} id: #{id} payload: #{payload}, arg1: #{arg1}, arg2: #{arg2}"
+      puts "*****" * 20
       start(name, id, payload)
     end
 
